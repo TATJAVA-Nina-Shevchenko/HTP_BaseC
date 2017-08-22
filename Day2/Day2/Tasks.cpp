@@ -1,5 +1,8 @@
-#include<stdio.h>
+﻿// To disable deprecation: warning C4996: 'scanf': This function or variable may be unsafe.
+#define _CRT_SECURE_NO_WARNINGS
 
+#include<stdio.h>
+#include <clocale>
 
 ////function declaration
 void task_01(void);
@@ -17,6 +20,7 @@ void task_05(void);
 
 
 void main(void){
+	setlocale(LC_ALL,"Russian");
 
 	short userChoice = 0;
 	bool runApp = true;
@@ -83,6 +87,9 @@ void main(void){
 void task_01(void){
 	int input = 0;
 
+	printf("Задача 1. Дано целое число. Если оно является положительным, то прибавить к нему 1, в противном");
+	printf("случае не изменять его. Вывести полученное число.\n\n");
+
 	puts("Enter number:");
 	scanf("%d",&input);
 	printf("Init value: %d\n", input);
@@ -102,6 +109,9 @@ void task_01(void){
 
 void task_02(void){
 	int input = 0;
+
+	printf("Задача 2. Дано целое число. Если оно является нечетным положительным, то прибавить к нему 1, если");
+	printf("отрицательным, то вычесть из него 2, если нулевым, то заменить его на 10. Вывести полученное число.\n\n");
 
 	puts("Enter number:");
 	scanf("%d",&input);
@@ -129,6 +139,9 @@ void task_03(void){
 	int inputOne = 0;
 	int inputTwo = 0;
 
+	printf("Задача 3. Введите два целых числа и сравните эти числа. Программа должна вывести сначала первое");
+	printf("введенное число, затем символ (> , < или =) в зависимости от значений переменных и в конце второе число.\n\n");
+
 	puts("Enter two numbers:");
 	scanf("%d%d",&inputOne, &inputTwo);
 	printf("Init values: %d, %d\n", inputOne, inputTwo);
@@ -150,6 +163,9 @@ void task_04(void){
 	int input_1 = 0;
 	int input_2 = 0;
 	int input_3 = 0;
+
+	printf("Задача 4. Введите 3 целых числа и определите наименьшее и наибольшее из них, посчитайте сумму,");
+	printf("произведение и среднее значение введенных чисел.\n\n");
 
 	puts("Enter three numbers:");
 	scanf("%d%d%d",&input_1, &input_2, &input_3);
@@ -186,6 +202,8 @@ void task_05(void){
 	int input_2 = 0;
 	int input_3 = 0;
 
+	printf("Задача 5. Напишите программу, которая расположила три введенных числа в порядке возрастания.\n\n");
+	
 	puts("Enter three numbers:");
 	scanf("%d%d%d",&input_1, &input_2, &input_3);
 	printf("Init values: %d, %d, %d\n", input_1, input_2, input_3);

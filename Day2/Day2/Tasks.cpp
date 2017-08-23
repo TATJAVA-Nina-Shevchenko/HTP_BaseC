@@ -21,6 +21,7 @@ void task_09(void);
 void task_10(void);
 void task_11(void);
 void task_12(void);
+void task_13(void);
 
 
 void main(void){
@@ -74,6 +75,10 @@ void main(void){
 			case 12:
 				task_12();
 				break;
+			case 13:
+				task_13();
+				break;
+
 
 			default:
 				puts("Enter number from 1 till 12 or \"0\" to exit");
@@ -636,4 +641,84 @@ void task_12(void){
 		
 
 	printf("Result: %s\n", result);
+}
+
+
+/*
+Задача 13. Мастями игральных карт присвоены порядковые номера: 1 – пики, 2 – трефы, 3 – бубны, 4 –
+червы. Достоинству карт, старше десятки, присвоены номера: 11 – валет, 12 – дама, 13 – король, 14 – туз.
+Даны два целых числа: N – достоинство (от 6 до 14) и M – масть карты (от 1 до 4). Вывести название
+соответствующей карты вида «шестерка бубен», «дама черви», «туз треф» и т.п.
+*/
+
+void task_13(void){
+	int suit = 0;
+	int precedence = 0;
+	
+	printf("Задача 13. Мастями игральных карт присвоены порядковые номера: 1 – пики, 2 – трефы, 3 – бубны, 4 –");
+	printf("червы. Достоинству карт, старше десятки, присвоены номера: 11 – валет, 12 – дама, 13 – король, 14 – туз.");
+	printf("Даны два целых числа: N – достоинство (от 6 до 14) и M – масть карты (от 1 до 4). Вывести название");
+	printf("соответствующей карты вида «шестерка бубен», «дама черви», «туз треф» и т.п.\n\n");
+
+	puts("Enter a number from 1 till 4:");
+	scanf("%d",&suit);
+	puts("Enter a number from 6 till 14:");
+	scanf("%d",&precedence);
+	printf("Input values: %d %d - ",suit, precedence);
+
+	char result[50] = "";
+
+		switch(precedence){
+			case 6:
+				strcat(result, "шестерка ");
+				break;
+			case 7:
+				strcat(result, "семерка ");
+				break;
+			case 8:
+				strcat(result, "восьмерка ");
+				break;
+			case 9:
+				strcat(result, "девятка ");
+				break;
+			case 10:
+				strcat(result, "десятка ");
+				break;
+			case 11:
+				strcat(result, "валет ");
+				break;
+			case 12:
+				strcat(result, "дама ");
+				break;
+			case 13:
+				strcat(result, "король ");
+				break;
+			case 14:
+				strcat(result, "туз ");
+				break;
+				
+			default:
+				break;
+				}
+		
+		switch(suit){
+				
+			case 1:
+				strcat(result, "пики");
+				break;
+			case 2:
+				strcat(result, "трефы");
+				break;
+			case 3:
+				strcat(result, "бубны");
+				break;
+			case 4:
+				strcat(result, "червы");
+				break;
+				
+			default:
+				break;
+				}
+
+		printf("Result: %s\n", result);
 }

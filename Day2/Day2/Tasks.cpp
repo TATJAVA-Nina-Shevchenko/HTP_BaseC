@@ -6,7 +6,7 @@
 #include <string.h>
 #include <math.h>
 
-#define ACCURACY 4
+#define ACCURACY 4 //try it once in 323 line and don't like
 
 ////function declaration
 void task_01(void);
@@ -22,7 +22,6 @@ void task_10(void);
 void task_11(void);
 void task_12(void);
 void task_13(void);
-
 
 void main(void){
 	setlocale(LC_ALL,"Russian");
@@ -87,12 +86,10 @@ void main(void){
 	}
 }
 
-
 /*
 Задача 1. Дано целое число. Если оно является положительным, то прибавить к нему 1, в противном
 случае не изменять его. Вывести полученное число.
 */
-
 void task_01(void){
 	int input = 0;
 
@@ -110,12 +107,10 @@ void task_01(void){
 	printf("Result value: %d\n", input);
 }
 
-
 /*
 Задача 2. Дано целое число. Если оно является нечетным положительным, то прибавить к нему 1, если
 отрицательным, то вычесть из него 2, если нулевым, то заменить его на 10. Вывести полученное число.
 */
-
 void task_02(void){
 	int input = 0;
 
@@ -143,7 +138,6 @@ void task_02(void){
 Задача 3. Введите два целых числа и сравните эти числа. Программа должна вывести сначала первое
 введенное число, затем символ (> , < или =) в зависимости от значений переменных и в конце второе число.
 */
-
 void task_03(void){
 	int inputOne = 0;
 	int inputTwo = 0;
@@ -167,7 +161,6 @@ void task_03(void){
 Задача 4. Введите 3 целых числа и определите наименьшее и наибольшее из них, посчитайте сумму,
 произведение и среднее значение введенных чисел.
 */
-
 void task_04(void){
 	int input_1 = 0;
 	int input_2 = 0;
@@ -197,7 +190,6 @@ void task_04(void){
 	int sum = input_1 + input_2 + input_3;
 	int mult = input_1*input_2*input_3;
 	double aver = sum / 3.0;
-
 	
 	printf("Result:\nmax = %d\nmin=%d\nsumm = %d\nmultiplication = %d\naverage = %.3lf", max, min, sum, mult, aver);
 }
@@ -205,7 +197,6 @@ void task_04(void){
 /*
 Задача 5. Напишите программу, которая расположила три введенных числа в порядке возрастания.
 */
-
 void task_05(void){
 	int input_1 = 0;
 	int input_2 = 0;
@@ -246,7 +237,6 @@ void task_05(void){
 выводим хорошо, если число больше 17 и меньше 30, то выводим удовлетворительно, если число меньше
 17, то выводим плохо (использовать вложенные операторы else/if).
 */
-
 void task_06(void){
 	int input = 0;
 
@@ -259,7 +249,6 @@ void task_06(void){
 	printf("Init value: %d\n", input);
 
 	char result[30] = "";
-
 
 		if (input > 17) {
 			if(input > 30){
@@ -278,12 +267,10 @@ void task_06(void){
 	printf("Result: %s \n",result);
 }
 
-
 /*
 Задача 7. Программа, которая в зависимости от номера месяца выводит одно из слов: Зима, Весна, Лето
 или Осень.
 */
-
 void task_07(void){
 	int input = 0;
 
@@ -322,7 +309,6 @@ void task_07(void){
 возрастанию или убыванию, то удвойте их, в противном случае замените значение каждой переменной на
 противоположное. Выведите новое значение переменных A, B, C.
 */
-
 void task_08(void){
 	double input_1 = 0;
 	double input_2 = 0;
@@ -351,14 +337,12 @@ void task_08(void){
 	}
 
 	printf("Result: %.3lf %.3lf %.3lf\n", input_1, input_2, input_3);
-		
 }
 
 /*
 Задача 9. Ввести координаты центра окружности O(xo,yo) и радиус R. Ввести также и координаты
 точки А(ха, ya) и определить, попадает ли данная точка в окружность или нет.
 */
-
 void task_09(void){
 	// Circle params
 	double x0 = 0;
@@ -378,7 +362,6 @@ void task_09(void){
 	scanf("%lf%lf",&xa, &ya);
 	printf("Circle : O (%.3lf,%.3lf) R = %lf\nPoint A(%.3lf,%.3lf)\n", x0, y0, r, xa, ya );
 
-
 	double distBetweenPoints = sqrt(pow(xa-x0 , 2) + pow(ya-y0, 2));
 
 	char result[50] = "";
@@ -387,9 +370,8 @@ void task_09(void){
 	} else {
 		strcpy(result, "Pont A doen't belong to the circle's area");
 	}
-
+	
 	printf("Result: %s\n", result);
-
 }
 
 /*
@@ -431,12 +413,10 @@ void task_10(void){
 	printf("Result: %s\n", result);
 }
 
-
 /*
 Задача 11. Дано целое число в диапазоне 1 – 7. Вывести строку – название дня недели,
 соответствующее данному числу (1 – «понедельник», 2 – «вторник» и т.д.).
 */
-
 void task_11(void){
 	int input = 0;
 	
@@ -479,12 +459,10 @@ void task_11(void){
 	printf("Result: %s\n", result);
 }
 
-
 /*
 Задача 12. Дано целое число в диапазоне 100 – 999. Вывести строку – описание данного числа,
 например: 256 – «двести пятьдесят шесть», 814 – «восемьсот четырнадцать».
 */
-
 void task_12(void){
 	int input = 0;
 	
@@ -638,7 +616,6 @@ void task_12(void){
 						break;
 				}
 			}
-		
 
 	printf("Result: %s\n", result);
 }
@@ -650,7 +627,6 @@ void task_12(void){
 Даны два целых числа: N – достоинство (от 6 до 14) и M – масть карты (от 1 до 4). Вывести название
 соответствующей карты вида «шестерка бубен», «дама черви», «туз треф» и т.п.
 */
-
 void task_13(void){
 	int suit = 0;
 	int precedence = 0;

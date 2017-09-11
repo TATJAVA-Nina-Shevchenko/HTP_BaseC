@@ -3,16 +3,25 @@
 #include <string.h>
 
 
-void func(char &str){
-	printf("I'm here %s", str);
+void func(){
+	*str = "new value";
 }
 
 void main(void)
 {
-	char *string = "Hello";
-	func((char &)string);
-	puts("");
+	//char *string = "Hello";
+	//func(&string);
+	//printf("The result %s\n", string);
 			
+	int y , y1 = 67;
+	scanf("%d",&y);
+	const int  *  x;
+	x = &y;
+
+	printf("Const %d", *x);
+x = &y1;
+
+	printf("Const %d", *x);
 }
 	
 

@@ -3,43 +3,26 @@
 #include <clocale>
 #include <string.h>
 
-void check();
-int get_product_id(char*);
-int isDigital(char);
-int change_param(char*);
+
+void func(){
+	*str = "new value";
+}
 
 void main(void)
 {
-	//char* str;
+	//char *string = "Hello";
+	//func(&string);
+	//printf("The result %s\n", string);
+			
+	int y , y1 = 67;
+	scanf("%d",&y);
+	const int  *  x;
+	x = &y;
 
-	//str = "product_attribute_24";
-	//int id = get_product_id(str);
-	//printf("Product id = %d\n", id);
+	printf("Const %d", *x);
+x = &y1;
 
-	//str = "rental_date_start_40";
-	//id = get_product_id(str);
-	//printf("Product id = %d\n", id);
-
-	//str = "55";
-	//id = get_product_id(str);
-	//printf("Product id = %d\n", id);
-
-	//str = "rental_date_start";
-	//id = get_product_id(str);
-	//printf("Product id = %d\n", id);
-
-
-	//str = "addtocart_40.EnteredQuantity";
-	//id = get_product_id(str);
-	//printf("Product id = %d\n", id);
-
-
-	char* value;
-	value = "Old value";
-
-	change_param(value);
-	printf("Here is value = %s\n", value);
-
+	printf("Const %d", *x);
 }
 	
 int get_product_id(char* str){

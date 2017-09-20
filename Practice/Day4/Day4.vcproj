@@ -2,7 +2,7 @@
 <VisualStudioProject
 	ProjectType="Visual C++"
 	Version="9.00"
-	Name="Day4"
+	Name="Day04"
 	ProjectGUID="{59742874-4B26-42EE-B00A-AAC2220DEB36}"
 	RootNamespace="Day4"
 	TargetFrameworkVersion="196613"

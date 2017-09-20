@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="windows-1251"?>
 <VisualStudioProject
 	ProjectType="Visual C++"
-	Version="9,00"
-	Name="Day2"
+	Version="9.00"
+	Name="Day02"
 	ProjectGUID="{6B3EA8C9-FEFD-48A9-95E7-B2FFF6288034}"
 	RootNamespace="Day2"
 	TargetFrameworkVersion="196613"
